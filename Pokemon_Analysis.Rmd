@@ -1,0 +1,133 @@
+---
+title: "Pokemon Dataset Analysis"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+read.csv("C:/Users/P.Jay/Desktop/Great Learning Courses/Data Science/Basics of Explanatory Data Analysis(1.5hrs)/pokemon.csv") -> pokemon
+```
+
+```{r}
+View(pokemon)
+```
+
+
+```{r}
+nrow(pokemon)
+```
+
+
+```{r}
+ncol(pokemon)
+```
+```{r}
+pokemon
+```
+
+```{r}
+table(pokemon$is_legendary)
+```
+
+```{r}
+table(pokemon$generation)
+```
+```{r}
+table(pokemon$type1)
+```
+```{r}
+min(pokemon$speed)
+```
+```{r}
+max(pokemon$speed)
+```
+```{r}
+is.na(pokemon$abilities)
+```
+```{r}
+sum(is.na(pokemon$abilities))
+```
+Meaning there is no null value
+
+```{r}
+colnames(pokemon)
+```
+```{r}
+
+colnames(pokemon)[colnames(pokemon) == 'type1'] <- "primary_type"
+```
+
+```{r}
+colnames(pokemon)
+```
+```{r}
+colnames(pokemon)[colnames(pokemon)=='type2'] <- "secondary_type"
+```
+
+```{r}
+pokemon$secondary_type
+```
+```{r}
+colnames(pokemon)[colnames(pokemon) == "name"] <- "pokeomon_name"
+```
+
+
+```{r}
+colnames(pokemon)
+```
+
+```{r}
+library(dplyr)
+```
+```{r}
+pokemon %>% filter(pokemon$primary_type == 'grass') -> grass_pokemon
+```
+
+```{r}
+grass_pokemon
+```
+```{r}
+min(grass_pokemon$speed)
+```
+```{r}
+max(grass_pokemon$speed)
+```
+```{r}
+mean(grass_pokemon$sp_attack)
+```
+```{r}
+library(ggplot2)
+```
+
+```{r}
+ggplot(data = grass_pokemon,aes(x=height_m)) + geom_histogram()
+```
+```{r}
+grass_pokemon$height_m
+```
+```{r}
+grass_pokemon$weight_kg
+```
+```{r}
+ggplot(data = grass_pokemon, mapping = aes(x=weight_kg)) + geom_histogram()
+```
+```{r}
+ggplot(data = grass_pokemon, mapping = aes(x=weight_kg)) + geom_histogram(fill='green')
+```
+```{r}
+ggplot(data = grass_pokemon, aes(x=is_legendary)) + geom_bar(fill = 'blue')
+```
+```{r}
+pokemon %>% filter(pokemon$primary_type=='fire') -> fire_pokemon
+fire_pokemon
+```
+```{r}
+ggplot(data = fire_pokemon, aes(x=generation, fill = as.factor(generation))) + geom_bar()
+```
+```{r}
+ggplot(data = fire_pokemon, aes(x = secondary_type, fill = as.factor(secondary_type))) + geom_bar()
+```
+

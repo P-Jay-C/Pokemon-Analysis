@@ -1,0 +1,107 @@
+contributors()
+laptops <- read.csv("C:/Users/P.Jay/Desktop/Great Learning Courses/Data Science/Basics of Explanatory Data Analysis(1.5hrs)/laptops.csv")
+View(laptops)
+laptops %>% select(Manufacturer) %>% filter(Manufacturer=='Dell')
+laptops %>% select(Manufacturer) %>% filter(Manufacturer=='Dell') -> dell
+laptop = laptops
+laptop  %>% select(Manufacturer) %>% filter(Manufacturer=='Dell') -> dell
+library(dplyr)
+laptops %>% select(Manufacturer) %>% filter(Manufacturer=='Dell') -> dell
+VEIW(dell)
+View(dell)
+install.packages("ggplot2")
+install.packages("ggplot2")
+library(ggplot2)
+ggplot(data = diamonds)
+?diamonds
+ggplot(data = diamonds)
+ggplot(data = diamonds, aes=price)
+ggplot(data = diamonds,aes(x=price))
+ggplot(data = diamonds,aes(x=price)) +geom_histogram()
+ggplot(data = diamonds,aes(x=price)) +geom_histogram(fill='green')
+ggplot(data = diamonds,aes(x=price)) +geom_histogram(fill='green', col='orange')
+ggplot(data=diamonds, aes(x=cut)) + geom_bar()
+ggplot(data=diamonds, aes(x=cut, fill = cut)) + geom_bar()
+ggplot(data = diamonds, aes(x=carat, y=price)) + geom_point()
+ggplot(data = diamonds, aes(x=carat, y=price,col=cut))
+View(diamonds)
+ggplot(data=diamonds, aes(x=cut)) + geom_bar()
+ggplot(data = diamonds, aes(x=carat, y=price,col=cut))
+ggplot(data = diamonds, aes(x=carat, y=price,col=cut)) + geom_point()
+?diamonds
+ggplot(data=diamonds, aes(x=clarity, y= carat)) + geom_boxplot()
+ggplot(data = diamonds, aes(x=clarity, y=carat,fil=clarity)) + geom_boxplot()
+ggplot(data = diamonds, aes(x=clarity, y=carat,fill=clarity)) + geom_boxplot()
+ggplot(data = diamonds, aes(x=clarity, y=carat,fill=cut)) + geom_boxplot()
+ggplot(data = diamonds, aes(x=clarity, y=carat,fill=cut)) + geom_boxplot()
+ggplot(data = diamonds, aes(x=clarity, y=carat,fill=cut)) + geom_boxplot()+facet_grid(~cut)
+ggplot(data = diamonds, aes(x=clarity, y=carat,fill=cut)) + geom_boxplot()+facet_grid(~cut)+ theme(plot.background = element_rect(fill = 'palegreen'))
+Pokemon
+read.csv("C:\Users\P.Jay\Desktop\Great Learning Courses\Data Science\Basics of Explanatory Data Analysis(1.5hrs)\pokeman.csv")
+read.csv("C:/Users/P.Jay/Desktop/Great Learning Courses/Data Science/Basics of Explanatory Data Analysis(1.5hrs)/pokeman.csv")
+read.csv("C:/Users/P.Jay/Desktop/Great Learning Courses/Data Science/Basics of Explanatory Data Analysis(1.5hrs)/pokeman.csv") -> pokeman
+read.csv("C:/Users/P.Jay/Desktop/Great Learning Courses/Data Science/Basics of Explanatory Data Analysis(1.5hrs)/pokemon.csv") -> pokemon
+View(pokemon)
+?pokemon
+??pokemon
+read.csv("C:/Users/P.Jay/Desktop/Great Learning Courses/Data Science/Basics of Explanatory Data Analysis(1.5hrs)/pokemon.csv") -> pokemon
+nrow(pokemon)
+ncol(pokemon)
+table(pokemon)
+table(pokemon$is_legendary)
+table(pokemon$generation)
+table(pokemon$type1)
+min(pokemon$hp)
+max(pokemon$hp)
+min(pokemon$speed)
+max(pokemon$speed)
+is.na(pokemon$abilities)
+sum(is.na(pokemon$abilities))
+colnames(pokeman)
+colnames(pokemon)
+colnames(pokemon)== "type1"
+colnames(pokemon)[colnames(pokeman) == "type1"] <- "primary_type"
+colnames(pokemon)[colnames(pokemon) == "type1"] <- "primary_type"
+colnames(pokemon)
+colnames(pokemon)[colnames(pokemon) == "type2"] <- "secondary_type"
+View(pokemon$secondary_type)
+collnames(pokemon)[colnames(pokemon) == "name"] <- "pokemon_name"
+colnames(pokemon)[colnames(pokemon) == "name"] <- "pokemon_name"
+library(dplyr)
+pokemon %>% filter(primary_type == "grass")
+pokemon %>% filter(primary_type == "grass") <- grass_pokemon
+pokemon %>% filter(primary_type == "grass") -> grass_pokemon
+View(grass_pokemon)
+min(grass_pokemon$speed)
+max(grass_pokemon$speed)
+mean(grass_pokemon$sp_attack)
+library(ggplot2)
+ggplot(data=grass_pokemon, aes(x=height_m))+geom_histogram()
+ggplot(data=grass_pokemon, aes(x=hp))+geom_histogram()
+ggplot(data=grass_pokemon, aes(x=hp))+geom_histogram(fill="palegreen")
+ggplot(data = grass_pokemon, aes(x=height_m)) + geom_histogram()
+ggplot(data = grass_pokemon, aes(x=height_m)) + geom_histogram()
+ggplot(data = pokemon, aes(x=weight_kg)) + geom_histogram()
+ggplot(data = pokemon, aes(x=weight_kg)) + geom_histogram(fill="corel")
+ggplot(data = pokemon, aes(x=weight_kg)) + geom_histogram(fill="blue")
+ggplot(data = grass_pokemon, aes(x=is_legendary)) + geom_bar(fill="blue")
+pokemon %>% filter(pokemon$primary_type=='fire') -> fire_pokemon
+view(fire_pokemon)
+View(fire_pokemon)
+ggplot(data = fire_pokemon, aes(x=generation, fill = as.factor(generation))) + geom_bar()
+ggplot(data = fire_pokemon, aes(X=secondary_type,f ill=as.factor(secondary_type)) + geom_bar()
+ggplot(data = fire_pokemon, aes(X=secondary_type,f ill=as.factor(secondary_type))) + geom_bar()
+ggplot(data = fire_pokemon, aes(X=secondary_type,f ill=as.factor(secondary_type))) + geom_bar()
+ggplot(data = fire_pokemon, aes(X=secondary_type,fill=as.factor(secondary_type))) + geom_bar()
+ggplot(data = fire_pokemon, aes(X=secondary_type,fill=as.factor(secondary_type))) + geom_bar()
+ggplot(data = fire_pokemon, aes(X=secondary_type,fill=as.factor(secondary_type)) + geom_bar()
+ggplot(data = fire_pokemon, aes(X=secondary_type,fill=as.factor(secondary_type))) + geom_bar()
+ggplot(data = fire_pokemon, aes(X=secondary_type,fill=as.factor(secondary_type))) + geom_bar()
+ggplot(data = fire_pokemon, aes(X=secondary_type,fill=as.factor(secondary_type)))) + geom_bar()
+ggplot(data = fire_pokemon, aes(x=generation, fill = as.factor(generation))) + geom_bar()
+ggplot(data = fire_pokemon, aes(x=secondary_type, fill = as.factor(secondary_type))) + geom_bar()
+```{r}
+read.csv("C:/Users/P.Jay/Desktop/Great Learning Courses/Data Science/Basics of Explanatory Data Analysis(1.5hrs)/pokemon.csv") -> pokemon
+View(pokemon)
+View(pokemon)
+savehistory("C:/Users/P.Jay/Desktop/Great Learning Courses/Data Science/Basics of Explanatory Data Analysis(1.5hrs)/pokemonhistory.txt")
